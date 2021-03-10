@@ -4,7 +4,7 @@
 #pragma once
 
 #include <atomic>
-#include <experimental/optional>
+#include <optional>
 #include "item_list.hpp"
 #ifdef __cplusplus
 extern "C" {
@@ -18,6 +18,6 @@ extern "C" {
 struct DjinniListString {
     static djinni::Handle<DjinniObjectHandle> fromCpp(const std::vector<std::string> & dc);
     static std::vector<std::string> toCpp(djinni::Handle<DjinniObjectHandle> dh);
-    static djinni::Handle<DjinniOptionalObjectHandle>fromCpp(std::experimental::optional<std::vector<std::string>> dc);
-    static std::experimental::optional<std::vector<std::string>> toCpp(djinni::Handle<DjinniOptionalObjectHandle> dh);
+    static djinni::Handle<DjinniOptionalObjectHandle>fromCpp(std::optional<std::vector<std::string>> dc);
+    static std::optional<std::vector<std::string>> toCpp(djinni::Handle<DjinniOptionalObjectHandle> dh);
 };

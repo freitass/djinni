@@ -48,7 +48,7 @@ The Python test-suite will run as part of the global test suite if you run `make
 
 * Proxy caching is not yet implemented.  In addition to some inefficiency, this means that the same object passed across the language boundary twice is not guaranteed to appear as a single object on the other side.
 * External types defined in YAML are not yet supported.
-* The support library code makes direct reference to <experimental/optional> types rather than respecting the command-line choice of a different optional library.
+* The support library code makes direct reference to <optional> types rather than respecting the command-line choice of a different optional library.
 * Use of non-nullable pointers is not yet supported.
 * Build scripts only support building with Xcode/clang on macOS.
 * There are no arguments for configurable header prefixes (or use of existing arguments).  All includes are unqualified.

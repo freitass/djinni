@@ -67,17 +67,17 @@ std::vector<std::string> DjinniListString::toCpp(djinni::Handle<DjinniObjectHand
     return _ret;
 }
 
-djinni::Handle<DjinniOptionalObjectHandle> DjinniListString::fromCpp(std::experimental::optional<std::vector<std::string>> dc) {
-    if (dc == std::experimental::nullopt) {
+djinni::Handle<DjinniOptionalObjectHandle> DjinniListString::fromCpp(std::optional<std::vector<std::string>> dc) {
+    if (dc == std::nullopt) {
         return nullptr;
     }
     return djinni::optionals::toOptionalHandle(DjinniListString::fromCpp(std::move(* dc)), optional_list_string___delete);
 }
 
-std::experimental::optional<std::vector<std::string>>DjinniListString::toCpp(djinni::Handle<DjinniOptionalObjectHandle> dh) {
+std::optional<std::vector<std::string>>DjinniListString::toCpp(djinni::Handle<DjinniOptionalObjectHandle> dh) {
      if (dh) {
-        return std::experimental::optional<std::vector<std::string>>(DjinniListString::toCpp(djinni::optionals::fromOptionalHandle(std::move(dh), list_string___delete)));
+        return std::optional<std::vector<std::string>>(DjinniListString::toCpp(djinni::optionals::fromOptionalHandle(std::move(dh), list_string___delete)));
     }
-    return std::experimental::nullopt;
+    return std::nullopt;
 }
 

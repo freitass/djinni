@@ -49,3 +49,9 @@ intellij-plugin/djinni.jar
 
 # profiling output
 callgrind.out.*
+
+# NVim - Conquer of Completion
+src/.bloop/
+src/.metals/
+src/project/.bloop/
+src/project/metals.sbt

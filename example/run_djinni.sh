@@ -92,8 +92,8 @@ if [ $already_generated -eq 0 ]; then
         --cpp-out "$temp_out/cpp" \
         --cpp-namespace textsort \
         --ident-cpp-enum-type foo_bar \
-        --cpp-optional-template std::experimental::optional \
-        --cpp-optional-header "<experimental/optional>" \
+        --cpp-optional-template std::optional \
+        --cpp-optional-header "<optional>" \
         \
         --jni-out "$temp_out/jni" \
         --ident-jni-class NativeFooBar \

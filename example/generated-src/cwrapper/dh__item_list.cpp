@@ -50,17 +50,17 @@ djinni::Handle<DjinniRecordHandle> DjinniItemList::fromCpp(const ::textsort::Ite
     return _aux;
 }
 
-djinni::Handle<DjinniOptionalRecordHandle> DjinniItemList::fromCpp(std::experimental::optional<::textsort::ItemList> dc) {
-    if (dc == std::experimental::nullopt) {
+djinni::Handle<DjinniOptionalRecordHandle> DjinniItemList::fromCpp(std::optional<::textsort::ItemList> dc) {
+    if (dc == std::nullopt) {
         return nullptr;
     }
     return djinni::optionals::toOptionalHandle(DjinniItemList::fromCpp(std::move(* dc)), optional_item_list___delete);
 }
 
-std::experimental::optional<::textsort::ItemList>DjinniItemList::toCpp(djinni::Handle<DjinniOptionalRecordHandle> dh) {
+std::optional<::textsort::ItemList>DjinniItemList::toCpp(djinni::Handle<DjinniOptionalRecordHandle> dh) {
      if (dh) {
-        return std::experimental::optional<::textsort::ItemList>(DjinniItemList::toCpp(djinni::optionals::fromOptionalHandle(std::move(dh), item_list___delete)));
+        return std::optional<::textsort::ItemList>(DjinniItemList::toCpp(djinni::optionals::fromOptionalHandle(std::move(dh), item_list___delete)));
     }
-    return std::experimental::nullopt;
+    return std::nullopt;
 }
 

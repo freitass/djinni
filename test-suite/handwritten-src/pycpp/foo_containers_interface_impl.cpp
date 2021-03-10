@@ -1,7 +1,7 @@
 #include <iostream>
 #include "foo_containers_interface_impl.hpp"
 #include "foo_some_other_record.hpp"
-#include <experimental/optional>
+#include <optional>
 
 namespace testsuite {
 
@@ -17,33 +17,33 @@ FooContainersRecord FooContainersInterfaceImpl::get_containers_record() {
     return m_record;
 }
 
-void FooContainersInterfaceImpl::set_optional_containers_record(const std::experimental::optional<FooContainersRecord> & rec) {
+void FooContainersInterfaceImpl::set_optional_containers_record(const std::optional<FooContainersRecord> & rec) {
    if (!rec) {
-        m_optional_record = std::experimental::nullopt;
+        m_optional_record = std::nullopt;
    }
    else {
         m_optional_record = *rec;
    }
 }
 
-std::experimental::optional<FooContainersRecord> FooContainersInterfaceImpl::get_optional_containers_record() {
+std::optional<FooContainersRecord> FooContainersInterfaceImpl::get_optional_containers_record() {
     return m_optional_record;
 }
 
-void FooContainersInterfaceImpl::set_optional_map_string_int(const std::experimental::optional<std::unordered_map<std::string, int32_t>> & m) {
+void FooContainersInterfaceImpl::set_optional_map_string_int(const std::optional<std::unordered_map<std::string, int32_t>> & m) {
     m_optional_map_string_int = m;
 }
 
-std::experimental::optional<std::unordered_map<std::string, int32_t>> FooContainersInterfaceImpl::get_optional_map_string_int() {
+std::optional<std::unordered_map<std::string, int32_t>> FooContainersInterfaceImpl::get_optional_map_string_int() {
     return m_optional_map_string_int;
 }
 
 
-void FooContainersInterfaceImpl::set_optional_list_int(const std::experimental::optional<std::vector<int>>  & li) {
+void FooContainersInterfaceImpl::set_optional_list_int(const std::optional<std::vector<int>>  & li) {
     m_optional_list_int = li;
 }
 
-std::experimental::optional<std::vector<int>>  FooContainersInterfaceImpl::get_optional_list_int() {
+std::optional<std::vector<int>>  FooContainersInterfaceImpl::get_optional_list_int() {
     return m_optional_list_int;
 }
 

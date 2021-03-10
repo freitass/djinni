@@ -87,8 +87,8 @@ if [ $already_generated -eq 0 ]; then
         --cpp-out "$temp_out/pycpp" \
         --cpp-namespace testsuite \
         --ident-cpp-enum-type foo_bar \
-        --cpp-optional-template std::experimental::optional \
-        --cpp-optional-header "<experimental/optional>" \
+        --cpp-optional-template std::optional \
+        --cpp-optional-header "<optional>" \
         --list-in-files "$deps_file.tmp"
 fi
 
